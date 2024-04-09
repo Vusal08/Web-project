@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+
+<body>
+    <div class="parent">
+        <div class="centered-block">
+            <p class="p00">Курс с проектом Московских дизайнеров</p>
+            <p class="p">Вернем деньги,если не найдете работу</p>
+            <p class="p1">Веб-Дизайнер</p>
+            <p class="p2"><strong>Создайте реальный проект спустя</strong></p>
+            <p class="p3"><strong>три месяца обучения</strong></p>
+            <ul>
+                <li class="l1">Получите опыт работы в команде на Мегахакатоне</li>
+                <li class="l2">Пройдите отбор на стажировку в IT-компании</li>
+                <li class="l3">Сделайте кейс для Дизайнеров</li>
+            </ul>
+            <form id="contact-form" method="post">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Gmail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <button type="submit">Отправить</button>
+            </form>
+            <script src="script.js">
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+
+                    // Получаем значения полей формы
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+
+                    // Здесь можно добавить логику для отправки данных на сервер или другие действия
+
+                    // Очищаем поля формы после отправки
+                    document.getElementById('name').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('phone').value = '';
+
+                    alert('Данные успешно отправлены! Спасибо за обращение.');
+                });
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
